@@ -1,9 +1,12 @@
+
 ---
+import errorImage from "@/assets/404.png";
+import { Image } from "astro:assets";
 import Main from "../layouts/Main.astro";
 ---
 
 <Main title="Error Page">
 <div class="min-h-screen  flex items-center justify-center">
-    <img  class="h-100 w-[50%]"  src="/404.png" alt="404 error image"/>
+    <Image class="h-100 w-[50%]" src={errorImage} alt="404 error image"/>
 </div>
 </Main>

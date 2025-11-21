@@ -1,3 +1,4 @@
+
 const navLinks = [{label: "Showcase", icon: '', href:"/showcase", index: 1 }, {label: "About", icon: '', href:"/about", index: 2}, {label: "Blog", icon: "", href: "/blog", index: 3}]
 import { motion } from "motion/react";
 import { useState } from "react";

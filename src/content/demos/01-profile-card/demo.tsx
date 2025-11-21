@@ -41,7 +41,7 @@ const ProfileCard = () => {
   } 
   return (
   
-    <div className="relative border border-border rounded-xl overflow-hidden bg-white/5">
+    <div className="border border-border rounded-xl overflow-hidden bg-white/5">
         <div onMouseEnter={()=> setShowDetails(true)} onMouseLeave={()=> setShowDetails(false)} className="relative border-border rounded-xl p-2 shadow-inner  shadow-white  ">
           <AnimatePresence>
 
@@ -61,7 +61,7 @@ const ProfileCard = () => {
            
           }
           </AnimatePresence>
-          <img className="w-72 rounded-[6.5px] "  src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/ea100163-8fcf-49de-b23f-3731edc6ee85_3840w.jpg" alt="" />
+          <img className="w-full max-w-72 rounded-[6.5px] "  src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/ea100163-8fcf-49de-b23f-3731edc6ee85_3840w.jpg" alt="" />
         </div>
     </div>
   )

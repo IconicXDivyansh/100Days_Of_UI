@@ -23,7 +23,7 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-# Unused assets
+# Unused assets -> Be sure to remove them later on.
 public/11_bulb.svg
 public/16_palette.svg
 public/18_monitor.svg
@@ -48,3 +48,5 @@ public/plantHero.png
 public/tree-growth-mobile.png
 public/underline-separator.svg
 public/wave.png
+assets/frustrated.png
+assets/happyface.png
