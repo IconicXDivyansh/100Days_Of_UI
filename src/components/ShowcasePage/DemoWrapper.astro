@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+import DemoCard from "./DemoCard.astro";
+const demos = await getCollection("demos");
+---
+
+<div class="px-2">
+    <div>
+        <!-- The search Filter goes here  -->
+         <p class="text-lg text-red-300 my-12 text-center font-secondary font-bold">WIP -> Search Filter</p>
+    </div>
+
+    <!-- The project Demo cards goes here  -->
+     <div class="grid grid-cols-1 gap-5 md:gap-8 md:grid-cols-3 ">
+        {demos.map((demo) => (
+            <DemoCard 
+                title={demo.data.title} 
+                description={demo.data.description} 
+                slug={demo.slug} 
+            />
+        ))}
+     </div>
+</div>

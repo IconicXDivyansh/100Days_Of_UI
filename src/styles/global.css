@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+:root{
+    --bg-background: #f7f7f7;
+    --bg-foreground: #ffffff;
+    --bg-darkHover: #eeeeee;
+}
+
+@theme{
+    --font-main: 'Cal Sans', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+    --font-secondary: 'Work Sans', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+    --color-background: #f7f7f7;
+    --color-foreground: #ffffff;
+    --color-border:#e1e1e1;
+    --color-darkHover: #eeeeee;
+}   
+
+@layer base{
+    html { font-family: var(--font-family-secondary);}
+    body{background: var(--color-background);}
+    h1, h2, h3, h4, h5, h6 { font-family: var(--font-family-main); }
+    a{text-decoration: none;}
+}

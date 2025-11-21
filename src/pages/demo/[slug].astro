@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import Container from '../../layouts/Container.astro';
+import Main from '../../layouts/Main.astro';
+export async function getStaticPaths() {
+  const demos = await getCollection('demos');
+  return demos.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+const layoutClasses = {
+    'contained': 'max-w-6xl mx-auto p-4',
+    'full-width': 'w-full p-0'
+};
+
+const containerClass = layoutClasses[entry.data.containerType];
+---
+
+<Main title={entry.data.title}>
+    <Container>
+        <div class={containerClass}>  
+            <h1 class="text-3xl w-full text-center mt-16 mb-10 font-main">{entry.data.title}</h1>
+            <div class="prose font-secondary dark:prose-invert">
+                <Content />
+            </div>
+        </div>
+    </Container>
+</Main>

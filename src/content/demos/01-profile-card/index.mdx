@@ -1,0 +1,27 @@
+---
+layout: "../../../layouts/DemoLayout.astro"
+title: "Profile Card"
+description: "A simple profile card component with hover effects."
+tags: ["react", "tailwind", "card"]
+containerType: "contained"
+---
+import Demo from './demo.tsx';
+import RandomUnderline from "@/components/common/RandomUnderline.astro";
+import Container from "@/layouts/Container.astro";
+
+
+<Demo client:load />
+
+{/* Blog Content goes here */}
+<div class="max-w-5xl mx-auto ">
+    <div class="text-center italic mb-10">
+        Profile card demo
+    </div>
+
+<RandomUnderline/>
+Explanation coming soon ...
+<p>Possible topics to Explain -> Animate presence , initial , animate, transition, exit, variants , spring</p>
+</div>
+
+
+

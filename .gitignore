@@ -22,3 +22,29 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Unused assets
+public/11_bulb.svg
+public/16_palette.svg
+public/18_monitor.svg
+public/18_sad_emoji.svg
+public/19_watch.svg
+public/3_hearts.svg
+public/6_stars.svg
+public/Confused.svg
+public/Design.png
+public/Done.png
+public/Invisible.svg
+public/Spiral clay.png
+public/Stars.svg
+public/closed eyes.png
+public/eye.png
+public/fire.png
+public/flag.png
+public/growth2.png
+public/hero1.png
+public/mobile-growth.png
+public/plantHero.png
+public/tree-growth-mobile.png
+public/underline-separator.svg
+public/wave.png

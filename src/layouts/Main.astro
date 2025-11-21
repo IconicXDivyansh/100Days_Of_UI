@@ -1,0 +1,33 @@
+---
+import '../styles/global.css';
+const { title = "100 Days of Frontend" } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+        <meta name="description" content="Record of journey to acquire better design sense and maybe a Job!" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<title>{title}</title>
+	</head>
+	<body class="bg-background">
+		<slot />
+	</body>
+</html>
+
+<style>
+    body{
+        /* background-color: hsla(0, 0%, 80%, 0.01);
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1799 1799' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), radial-gradient(circle at 75% 65%, hsla(0, 0%, 60%, 1) 10%, transparent 70%), radial-gradient(circle at 40% 40%, hsla(0, 0%, 50%, 1) 8%, transparent 80%), radial-gradient(circle at 20% 20%, hsla(0, 0%, 40%, 1) 6%, transparent 75%);
+        background-blend-mode: overlay, normal, normal, normal; */
+        /* background-color: hsl(220, 20%, 98%);
+        background-image: radial-gradient(at 50% 50%, hsl(210, 30%, 97%) 0px, transparent 70%), radial-gradient(at 10% 10%, hsl(230, 10%, 96%) 0px, transparent 50%); */
+        /* background-color: hsl(200, 100%, 99%);
+        background-image: radial-gradient(at 20% 20%, hsl(210, 80%, 98%) 0px, transparent 50%), radial-gradient(at 80% 80%, hsl(190, 70%, 98%) 0px, transparent 50%); */
+    }
+</style>

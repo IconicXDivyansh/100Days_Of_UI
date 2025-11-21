@@ -1,0 +1,21 @@
+---
+import Header from "../components/common/Header";
+import DemoWrapper from "../components/ShowcasePage/DemoWrapper.astro";
+import Container from "../layouts/Container.astro";
+import Main from "../layouts/Main.astro";
+---
+
+<Main>
+    <Container> 
+        <Header client:load/>
+        <main class="min-h-screen mt-10 rounded-3xl bg-foreground border border-border mx-0.5 p-1">
+            <div class="inline-block  relative">
+                <h2 class="font-main text-4xl px-2">
+                    Showcase
+                </h2>   
+                <img class="w-10 h-10 opacity-90  absolute -top-0.5 -right-10" src="17_butterfly.svg" alt="" />
+            </div>
+            <DemoWrapper />
+        </main>
+    </Container>
+</Main>

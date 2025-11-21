@@ -1,16 +1,16 @@
 ---
-
+import Header from "@/components/common/Header";
+import Hero from "../components/LandingPage/Hero";
+import Container from "../layouts/Container.astro";
+import Main from "../layouts/Main.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Main>
+    <div class="min-h-screen flex flex-col items-center ">
+        <Header client:load />
+        <Container>
+            <Hero client:load />    
+        </Container>
+        <div class="text-center font-secondary">The  section below is Work in Progress <img src="wand.svg" class="w-16 mx-auto" /> </div>
+	</div>  
+</Main>
