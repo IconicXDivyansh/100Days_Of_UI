@@ -49,19 +49,19 @@ const ProfileCard = () => {
            showDetails && 
            <motion.div  variants={childVariants} initial="hidden" animate="visible" exit="exit" className="absolute  inset-x-0   bg-white/50 backdrop-blur-sm w-[94.8%]  h-[40%] bottom-2 mx-auto  rounded-b-[6px] font-secondary p-4">
             <div>
-            <motion.h3 variants={childVariants} className="font-main text-3xl">Sophia Taylor</motion.h3>
+            <motion.h3 variants={childVariants} className="font-main text-xl md:text-3xl">Sophia Taylor</motion.h3>
             <motion.p variants={childVariants} className="text-xs md:text-sm px-1 tracking-tighter pt-2 text-neutral-800 max-w-[80%]">A <span>UI</span> Designer who focuses on simplicity & usability.</motion.p>
             </div>
             <motion.div variants={childVariants} className="mt-6 ">
-              <button className="">
-                <span className="-outline-offset-4 outline-4 outline-border/50 hover:outline-border/90  transition duration-100  bg-white  py-3 px-4 rounded-full tracking-tight">View Profile</span>
+              <button className="hidden md:block">
+                <span className="-outline-offset-4 outline-4 outline-border/50 hover:outline-border/90  transition duration-100  bg-white  md:py-3 md:px-4 rounded-full tracking-tight">View Profile</span>
                 </button>
             </motion.div>
            </motion.div>  
            
           }
           </AnimatePresence>
-          <img className="w-full max-w-72 rounded-[6.5px] "  src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/ea100163-8fcf-49de-b23f-3731edc6ee85_3840w.jpg" alt="" />
+          <img className="w-full max-w-72 rounded-[6.5px]"  src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/ea100163-8fcf-49de-b23f-3731edc6ee85_3840w.jpg" alt="" />
         </div>
     </div>
   )

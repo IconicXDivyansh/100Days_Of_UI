@@ -1,0 +1,26 @@
+---
+layout: "../../../layouts/DemoLayout.astro"
+title: "Animation Sequences"
+description: "Animation Sequences demo"
+tags: ["react", "tailwind", "card"] 
+containerType: "contained"
+---
+import RandomUnderline from "@/components/common/RandomUnderline.astro";
+import DemoContainer from "@/layouts/DemoContainer.astro";
+import Demo from './demo.tsx';
+
+<DemoContainer>
+    <Demo client:load />
+</DemoContainer>
+{/* Blog Content goes here */}
+<div class="max-w-7xl mx-auto ">
+    <div class="text-[10px] md:text-[12px] text-center italic mt-4 mb-10">
+        Animation Sequences demo
+    </div>
+
+<RandomUnderline/>
+Explanation coming soon ...
+</div>
+
+
+
