@@ -1,3 +1,38 @@
-<div class="max-w-7xl grid p-10 place-content-center border border-border rounded-md">
+---
+const { padding, variant, width } = Astro.props;
+type paddingClasses = {
+    true: string;
+    false: string;
+}
+
+type variantClasses = {
+    "centered": string;
+    "default" : string;
+}
+
+type widthClasses = {
+    "default" : "max-w-7xl",
+    "full" : "w-full"
+}
+
+const paddingClasses : paddingClasses = {
+    true: "p-10",
+    false: "p-0",
+};
+
+const variantClasses : variantClasses = {
+    "centered": "place-content-center",
+    "default" : ""
+};
+
+const widthClasses : widthClasses = {
+    "default" : "max-w-7xl md:max-w-4xl mx-auto",
+    "full" : "w-full mx-auto" 
+}
+
+import { cn } from "@/utils";
+---
+
+<div class={cn("grid border border-border ",paddingClasses[padding], variantClasses[variant], widthClasses[width])}>
     <slot/>
 </div>

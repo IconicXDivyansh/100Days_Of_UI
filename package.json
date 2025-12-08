@@ -20,5 +20,9 @@
     "react-dom": "^19.2.0",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.6.0"
   }
 }
