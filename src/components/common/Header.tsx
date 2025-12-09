@@ -28,9 +28,9 @@ const Header = () => {
     <motion.div className="sticky" variants={headerVariants} animate={isHidden ? "hidden" : "visible"}>
         <motion.header initial={{ opacity: 0 , y: -20, filter: "blur(5px)"}} animate={{ opacity: 1 , y: 0, filter: "blur(0px)"}} transition={{ duration: 0.5 , delay: 0.2 }} className="border border-border bg-black/5 backdrop-blur-xs pb-1 px-1  rounded-b-xl">
             {/* <SplitText /> */}
-                <nav className="flex  border border-border bg-white rounded-b-[calc(var(--radius-xl)-3px)] justify-between">
+                <nav className="flex items-center  border border-border bg-white rounded-b-[calc(var(--radius-xl)-3px)] justify-between">
                     <a className="p-2 mx-2 rounded-lg  hover:bg-black/10" href="/">
-                    <img className="h-6 w-6" src="./house.svg" alt="" />
+                    <img className="h-5 w-5" src="/house.svg" alt="" />
                     </a>
 
                     <motion.ul onMouseLeave={() => setCurrentRouteIndex(null)} className="flex gap-4 mx-1">

@@ -10,16 +10,16 @@ const { title, description, slug } = Astro.props;
 
 <div class="bg-background p-1 border border-border hover:bg-darkHover transition duration-200 rounded-xl">
     {/* Inner Wrapper */}
-    <div class="p-1  ">
+    <div class="p-1 ">
     {/* Card Content goes here  */}
             <div class="border  border-border bg-foreground rounded-[9px] p-2">
                 <div class="flex md:flex-col justify-between">
                     <div class="flex">
                         <img class="h-20 w-20" src="/codeWindow.svg" />
                     </div>
-                    <h5 class="font-main text-lg">{title}</h5>
+                    <h5 class="font-main m-3 md:m-0 text-right md:text-left  md:p-0 md:text-lg">{title}</h5>
                 </div>
-                <div class="font-secondary">
+                <div class="font-secondary text-sm ">
                     <p>{description}</p>
                 </div>
             </div>
@@ -27,7 +27,8 @@ const { title, description, slug } = Astro.props;
                 <a href={`/demo/${slug}`} class="font-secondary bg-foreground hover:bg-darkHover border border-border rounded-full p-1" >
                     <span class="text-sm px-1">Open Demo</span>
                 </a>
-                <img class="bg-foreground p-1 rounded-lg h-8 w-8 border border-border" src="/arrow-up-right.svg" alt="open link icon" />
+                <svg class="h-7 w-7 bg-foreground border border-border rounded-sm stroke-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 18L8.5 15.5M18 6H9M18 6V15M18 6L11.5 12.5"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                <!-- <img class="bg-foreground p-1 rounded-lg h-8 w-8 border border-border" src="/arrow-up-right.svg" alt="open link icon" /> -->
             </div>
     </div>
 </div>

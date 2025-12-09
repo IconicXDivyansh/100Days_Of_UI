@@ -1,0 +1,100 @@
+---
+title: "Testimonial Cards (cohere website)"
+description: "slanted cards with minimal css animation"
+layout: "../../../layouts/DemoLayout.astro"
+containerType: "full-width"  
+---
+
+import RandomUnderline from "@/components/common/RandomUnderline.astro";
+import DemoContainer from "@/layouts/DemoContainer.astro";
+import Demo, { CardDraft4, CardsDraft1, CardsDraft2, CardsDraft3, TestimonialCard } from "./demo.tsx";
+
+
+<DemoContainer width="full" padding="true" >
+    <Demo client:load />
+</DemoContainer>
+
+
+<div class="max-w-7xl mx-auto">
+    <div class="text-[10px] md:text-[12px] text-center italic mt-4 mb-10">
+        testimonial cards (cohere) demo
+    </div>
+</div>
+
+<RandomUnderline />
+
+<div class="my-10"> 
+
+<h4 class="font-main">First Draft</h4>
+<div class="my-2">
+<CardsDraft1 />
+Intution: Making the parent container as flex and changing width of the children divs inside it on hover. Using clip-path to achieve slanted / razor shape.
+<h4 class="font-main">Problems </h4>
+
+<p> - The shapes are slanted from the very beginning and even when applying clip-path on hover gives a very jarring experience. </p>
+<p> - Layout shift happening due to changing width, the text warping around. </p>
+<p> - In clip-path shape we are using % that is relative to parent container, the size grows the it will be more slanted.</p>
+</div>
+
+<h4 class="font-main">Second Draft</h4>
+<div class="my-2">
+ <CardsDraft2 />
+</div>
+
+<div class="">
+Solution : Instead of shrinking and expanding the left and right container respectively , we will keep both container fixed at width of 55%.
+- left container : left-0
+- right container: right-0
+- the center : 55% + 55% = 110%, they both will overlap by 10% in the middle. The clip-path razor shape will cut-through this overlap zone.
+<div class="font-main">Optimizations: </div>
+- Absolute Positioning: The containers slide over each other rather than pushing each other. This stops the jitter.
+
+- The Overlap Zone: Because 80% + 25% > 100%, there is no gap between the razor edges.
+
+- object-cover: The image scales smoothly without stretching.
+
+<h4 class="font-main">Problems </h4>
+- One single div is undergoing all the transforms, -> chaning width of the divs inside it on hover. 
+- Also, clip-path is the same it's not changing but on the website initially there is no clip-path, the clip-path then comes in naturally.
+</div>
+
+<span class="font-main">Third Draft</span>
+
+<div class="my-2">
+<CardsDraft3 />
+
+<h4 class="font-main">Problems</h4>
+- The borders doesn't seem to be animating as well because we are using clip-path borders will be clipped.
+</div>
+
+<span class="font-main">Optimizations</span>
+- Creating  stacking boxes on top of each other, the border is simply illusion of the background of the outer box peeking through the inner box. The inner box is absolutely positioned inside outer box
+occupying h-full w-full but leaving 1px everywhere.
+- Both layers must be identical in terms of all the transitions and everything
+
+
+<span class="font-main">Fourth Draft</span>
+<div class="my-2">
+<TestimonialCard />
+</div>
+
+<span>Explanation</span>
+
+<span>
+```jsx
+{/* LEFT WRAPPER: Handles Position (absolute left-0) & Width (80% -> 55%) */}
+<div className="absolute left-0 h-full ...">
+  
+  {/* TWIN 1: The "Border" (Dark, inset-0, full shape) */}
+  <div className="absolute inset-0 bg-neutral-900 ..."></div>
+
+  {/* TWIN 2: The "Content" (White, inset-[1px], full shape) */}
+  <div className="absolute inset-[1px] bg-white ...">
+     {/* Your text goes here */}
+  </div>
+
+</div>
+
+```
+</span>
+</div>
